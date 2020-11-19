@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.3">
+    <description></description>
+    <groupId>b36f9057-0175-1000-7ec1-63187bd2c0b0</groupId>
+    <name>ScriptedTransformRecord Test</name>
+    <snippet>
+        <processGroups>
+            <id>0c46bafb-92b4-3f4b-0000-000000000000</id>
+            <parentGroupId>70bbc5bf-8996-3d7b-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>9969e95c-f18a-3d6c-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0c46bafb-92b4-3f4b-0000-000000000000</groupId>
+                        <id>c043cd61-ebb4-322e-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0c46bafb-92b4-3f4b-0000-000000000000</groupId>
+                        <id>e3f96659-4ecc-34a8-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>eae715d6-fdfa-37a3-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0c46bafb-92b4-3f4b-0000-000000000000</groupId>
+                        <id>e3f96659-4ecc-34a8-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0c46bafb-92b4-3f4b-0000-000000000000</groupId>
+                        <id>a8b15181-e250-3e64-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>13890dd6-aef5-34f0-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-record-serialization-services-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.13.0-SNAPSHOT</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>schema-access-strategy</key>
+                            <value>
+<name>schema-access-strategy</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-registry</key>
+                            <value>
+<dependencies>
+    <dependentValues>confluent-encoded</dependentValues>
+    <dependentValues>schema-name</dependentValues>
+    <dependentValues>hwx-schema-ref-attributes</dependentValues>
+    <dependentValues>hwx-content-encoded-schema</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
+<name>schema-registry</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-name</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-name</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-version</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-version</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-branch</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-branch</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-text</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-text-property</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-text</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-inference-cache</key>
+                            <value>
+<dependencies>
+    <dependentValues>infer-schema</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<identifiesControllerService>org.apache.nifi.serialization.RecordSchemaCacheService</identifiesControllerService>
+<name>schema-inference-cache</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Date Format</key>
+                            <value>
+<name>Date Format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Time Format</key>
+                            <value>
+<name>Time Format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Timestamp Format</key>
+                            <value>
+<name>Timestamp Format</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>JsonTreeReader</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>schema-access-strategy</key>
+                            <value>schema-text-property</value>
+                        </entry>
+                        <entry>
+                            <key>schema-registry</key>
+                        </entry>
+                        <entry>
+                            <key>schema-name</key>
+                        </entry>
+                        <entry>
+                            <key>schema-version</key>
+                        </entry>
+                        <entry>
+                            <key>schema-branch</key>
+                        </entry>
+                        <entry>
+                            <key>schema-text</key>
+                            <value>{
+	"name": "UserRecord",
+	"namespace": "com.mycompany.nifi",
+	"type": "record",
+	"fields": [
+		{
+			"name": "FullName",
+			"type": "string"
+		}
+	]
+}</value>
+                        </entry>
+                        <entry>
+                            <key>schema-inference-cache</key>
+                        </entry>
+                        <entry>
+                            <key>Date Format</key>
+                        </entry>
+                        <entry>
+                            <key>Time Format</key>
+                        </entry>
+                        <entry>
+                            <key>Timestamp Format</key>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.json.JsonTreeReader</type>
+                </controllerServices>
+                <controllerServices>
+                    <id>9eeb889f-843e-37c6-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-record-serialization-services-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.13.0-SNAPSHOT</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>Schema Write Strategy</key>
+                            <value>
+<name>Schema Write Strategy</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-cache</key>
+                            <value>
+<identifiesControllerService>org.apache.nifi.serialization.RecordSchemaCacheService</identifiesControllerService>
+<name>schema-cache</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-protocol-version</key>
+                            <value>
+<dependencies>
+    <dependentValues>hwx-schema-ref-attributes</dependentValues>
+    <dependentValues>hwx-content-encoded-schema</dependentValues>
+    <propertyName>Schema Write Strategy</propertyName>
+</dependencies>
+<name>schema-protocol-version</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-access-strategy</key>
+                            <value>
+<name>schema-access-strategy</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-registry</key>
+                            <value>
+<dependencies>
+    <dependentValues>confluent-encoded</dependentValues>
+    <dependentValues>schema-name</dependentValues>
+    <dependentValues>hwx-schema-ref-attributes</dependentValues>
+    <dependentValues>hwx-content-encoded-schema</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
+<name>schema-registry</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-name</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-name</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-version</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-version</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-branch</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-name</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-branch</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>schema-text</key>
+                            <value>
+<dependencies>
+    <dependentValues>schema-text-property</dependentValues>
+    <propertyName>schema-access-strategy</propertyName>
+</dependencies>
+<name>schema-text</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Date Format</key>
+                            <value>
+<name>Date Format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Time Format</key>
+                            <value>
+<name>Time Format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Timestamp Format</key>
+                            <value>
+<name>Timestamp Format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Pretty Print JSON</key>
+                            <value>
+<name>Pretty Print JSON</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>suppress-nulls</key>
+                            <value>
+<name>suppress-nulls</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>output-grouping</key>
+                            <value>
+<name>output-grouping</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>compression-format</key>
+                            <value>
+<name>compression-format</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>compression-level</key>
+                            <value>
+<dependencies>
+    <dependentValues>gzip</dependentValues>
+    <propertyName>compression-format</propertyName>
+</dependencies>
+<name>compression-level</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>JsonRecordSetWriter</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Schema Write Strategy</key>
+                        </entry>
+                        <entry>
+                            <key>schema-cache</key>
+                        </entry>
+                        <entry>
+                            <key>schema-protocol-version</key>
+                        </entry>
+                        <entry>
+                            <key>schema-access-strategy</key>
+                            <value>schema-text-property</value>
+                        </entry>
+                        <entry>
+                            <key>schema-registry</key>
+                        </entry>
+                        <entry>
+                            <key>schema-name</key>
+                        </entry>
+                        <entry>
+                            <key>schema-version</key>
+                        </entry>
+                        <entry>
+                            <key>schema-branch</key>
+                        </entry>
+                        <entry>
+                            <key>schema-text</key>
+                            <value>{
+	"name": "SplitUserRecord",
+	"namespace": "com.mycompany.nifi",
+	"type": "record",
+	"fields": [
+		{
+			"name": "FirstName",
+			"type": "string"
+		},
+		{
+			"name": "LastName",
+			"type": "string"
+		}
+	]
+}</value>
+                        </entry>
+                        <entry>
+                            <key>Date Format</key>
+                        </entry>
+                        <entry>
+                            <key>Time Format</key>
+                        </entry>
+                        <entry>
+                            <key>Timestamp Format</key>
+                        </entry>
+                        <entry>
+                            <key>Pretty Print JSON</key>
+                        </entry>
+                        <entry>
+                            <key>suppress-nulls</key>
+                        </entry>
+                        <entry>
+                            <key>output-grouping</key>
+                        </entry>
+                        <entry>
+                            <key>compression-format</key>
+                        </entry>
+                        <entry>
+                            <key>compression-level</key>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.json.JsonRecordSetWriter</type>
+                </controllerServices>
+                <processors>
+                    <id>a8b15181-e250-3e64-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>336.28334045410156</x>
+                        <y>252.88333129882812</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.13.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+<value>
+    <name>mime-type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>schema.name</key>
+<value>
+    <name>schema.name</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>{
+  "FullName": "John Smith"
+}</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+                            </entry>
+                            <entry>
+<key>schema.name</key>
+<value>user_record</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>60 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>GenerateFlowFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>c043cd61-ebb4-322e-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>872.0</x>
+                        <y>472.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.13.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>counter-name</key>
+<value>
+    <name>counter-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>delta</key>
+<value>
+    <name>delta</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>counter-name</key>
+<value>objects</value>
+                            </entry>
+                            <entry>
+<key>delta</key>
+<value>1</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>UpdateCounter</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.UpdateCounter</type>
+                </processors>
+                <processors>
+                    <id>e3f96659-4ecc-34a8-0000-000000000000</id>
+                    <parentGroupId>0c46bafb-92b4-3f4b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>320.0</x>
+                        <y>480.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-scripting-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.13.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Record Reader</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+    <name>Record Reader</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Record Writer</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+    <name>Record Writer</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Script Engine</key>
+<value>
+    <name>Script Engine</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Script Body</key>
+<value>
+    <name>Script Body</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Script File</key>
+<value>
+    <name>Script File</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Module Directory</key>
+<value>
+    <name>Module Directory</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Record Reader</key>
+<value>13890dd6-aef5-34f0-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Record Writer</key>
+<value>9eeb889f-843e-37c6-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Script Engine</key>
+<value>Groovy</value>
+                            </entry>
+                            <entry>
+<key>Script Body</key>
+<value>import static com.mycompany.nifi.ScriptUtil.SCHEMA
+import org.apache.nifi.serialization.record.MapRecord
+
+def nameParts = record.getValue("FullName").split(/[\s]{1,}/)
+def values = [
+	FirstName: nameParts[0],
+	LastName: nameParts[1]
+]
+
+new MapRecord(SCHEMA, values)</value>
+                            </entry>
+                            <entry>
+<key>Script File</key>
+                            </entry>
+                            <entry>
+<key>Module Directory</key>
+<value>/tmp/myschema-helper.jar</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>ScriptedTransformRecord</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.script.ScriptedTransformRecord</type>
+                </processors>
+            </contents>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <name>ScriptedTransformRecord Test</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>11/19/2020 16:14:29 EST</timestamp>
+</template>
