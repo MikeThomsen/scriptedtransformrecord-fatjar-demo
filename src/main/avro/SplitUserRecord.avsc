@@ -1,0 +1,15 @@
+{
+	"name": "SplitUserRecord",
+	"namespace": "com.mycompany.nifi",
+	"type": "record",
+	"fields": [
+		{
+			"name": "FirstName",
+			"type": "string"
+		},
+		{
+			"name": "LastName",
+			"type": "string"
+		}
+	]
+}

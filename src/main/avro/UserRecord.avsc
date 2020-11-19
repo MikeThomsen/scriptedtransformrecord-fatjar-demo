@@ -1,0 +1,11 @@
+{
+	"name": "UserRecord",
+	"namespace": "com.mycompany.nifi",
+	"type": "record",
+	"fields": [
+		{
+			"name": "FullName",
+			"type": "string"
+		}
+	]
+}
